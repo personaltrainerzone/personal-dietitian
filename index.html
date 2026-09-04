@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f56b51" />
+    <meta name="description" content="A private, Indian-food-first nutrition and fitness planning assistant." />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="My Dietitian" />
+    <title>My Personal Dietitian</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="apple-touch-icon" href="icons/icon-192.svg" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="shell">
+      <header class="topbar">
+        <div class="brand"><span class="brand-mark">✦</span><div><strong>My Personal Dietitian</strong><small>private, practical nutrition</small></div></div>
+        <div class="topbar-actions"><div class="date-pill" id="todayLabel"></div><button class="install-btn" id="installButton" hidden>Install app</button></div>
+      </header>
+      <aside class="sidebar" aria-label="Main navigation">
+        <button class="nav active" data-view="dashboard">⌂ <span>Today</span></button>
+        <button class="nav" data-view="plan">☷ <span>Daily plan</span></button>
+        <button class="nav" data-view="log">＋ <span>Food log</span></button>
+        <button class="nav" data-view="ask">✦ <span>Ask my dietitian</span></button>
+        <button class="nav" data-view="progress">↗ <span>Progress</span></button>
+        <button class="nav" data-view="review">◌ <span>Weekly review</span></button>
+        <button class="nav" data-view="profile">⚙ <span>Profile</span></button>
+        <p class="privacy-note">Your data stays in this browser.</p>
+      </aside>
+      <main>
+        <section id="dashboard" class="view active"></section>
+        <section id="plan" class="view"></section>
+        <section id="log" class="view"></section>
+        <section id="ask" class="view"></section>
+        <section id="progress" class="view"></section>
+        <section id="review" class="view"></section>
+        <section id="profile" class="view"></section>
+      </main>
+    </div>
+    <div id="toast" role="status" aria-live="polite"></div>
+    <script src="app.js"></script>
+  </body>
+</html>
